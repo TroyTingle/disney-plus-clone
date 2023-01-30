@@ -9,7 +9,7 @@ export default function Home() {
       <head>
         <title>Disney+ Clone</title>
       </head>
-      <div className='bg-blue-500'>
+      <div className=''>
         {/* Header/Nav Bar */}
         <Header />
         {/*Featured bar */}
