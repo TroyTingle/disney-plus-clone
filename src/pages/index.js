@@ -1,22 +1,18 @@
-import Header from '@/components/Header';
-import HomeMain from '@/components/Home';
 import { Inter } from '@next/font/google';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Login() {
   return (
     <>
-      <head>
-        <title>Disney+ Clone</title>
-      </head>
+      <Head>
+        <title>Login | Disney+ Clone</title>
+      </Head>
       <body>
-        <div className=''>
-          {/* Header/Nav Bar */}
-          <Header />
-          {/* Main Content */}
-          <HomeMain />
-        </div>
+        <p>Login</p>
+        <Link href='/Home'>Home</Link>
       </body>
     </>
   );

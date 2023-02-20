@@ -11,7 +11,7 @@ function Header() {
         <li>
           <Link
             className='mr-2 md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href=''
+            href='/Home'
             ut
           >
             <svg
@@ -34,7 +34,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href=''
+            href='/Search'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -56,7 +56,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href=''
+            href='/WatchList'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -74,7 +74,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href=''
+            href='/Originals'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -96,7 +96,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href=''
+            href='/Movies'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -118,7 +118,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href=''
+            href='/Series'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
