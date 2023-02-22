@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Disney+ Clone</title>
       </Head>
-      <main className='p-4'>
+      <main className=''>
         <Header />
         <HomeCarousel />
         <StudioNav />

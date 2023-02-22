@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <nav className='flex flex-row'>
+    <nav className='flex flex-row p-4'>
       <ul className='flex flex-wrap items-center justify-left text-white text-base font-semibold'>
         <li className='ml-5 mr-8'>
           <Image src='/DisneyPlusLogo.png' width={100} height={67} />

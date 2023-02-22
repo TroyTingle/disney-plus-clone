@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: Montserrat;
+  }
+
   body {
     @apply h-screen bg-gradient-to-b from-slate-900 via-gray-600 to-slate-700;
   }
