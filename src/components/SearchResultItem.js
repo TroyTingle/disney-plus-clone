@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const SearchResultItem = ({ items, input }) => {
   const filteredItems = items.results.filter((item) => {
-    return item.name.includes(input);
+    return item.name?.toLocaleLowerCase().trim().includes(input);
   });
 
   return (

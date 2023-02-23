@@ -7,55 +7,11 @@ const apiFetch = async (endpoint) => {
   return json;
 };
 
-export const getShowList = async () => {
+export const getFilmList = async () => {
   return [
     {
-      category: 'originals',
-      title: 'Originals',
       items: await apiFetch(
-        `/discover/tv?with_network=213&language=en-GB&api_key=${API_KEY}`
-      ),
-    },
-    {
-      category: 'trending',
-      title: 'Trending',
-      items: await apiFetch(
-        `/trending/all/week?language=en-GB&api_key=${API_KEY}`
-      ),
-    },
-    {
-      category: 'top_rated',
-      title: 'Top rated',
-      items: await apiFetch(
-        `/movie/top_rated?language=en-GB&api_key=${API_KEY}`
-      ),
-    },
-    {
-      category: 'horror',
-      title: 'Horror',
-      items: await apiFetch(
-        `/discover/movie?with_genres=27&language=en-GB&api_key=${API_KEY}`
-      ),
-    },
-    {
-      category: 'comedy',
-      title: 'Comedy',
-      items: await apiFetch(
-        `/discover/movie?with_genres=35&language=en-GB&api_key=${API_KEY}`
-      ),
-    },
-    {
-      category: 'action',
-      title: 'Action',
-      items: await apiFetch(
-        `/discover/movie?with_genres=28&language=en-GB&api_key=${API_KEY}`
-      ),
-    },
-    {
-      category: 'documentary',
-      title: 'Documentary',
-      items: await apiFetch(
-        `/discover/movie?with_genres=99&language=en-GB&api_key=${API_KEY}`
+        `/discover/movie?with_network=337&language=en-GB&api_key=${API_KEY}`
       ),
     },
   ];
