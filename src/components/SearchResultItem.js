@@ -1,15 +1,15 @@
 import Image from 'next/image';
 
 export const SearchResultItem = ({ items, input }) => {
-  const filteredItems = items.results.filter((item) => {
+  const filteredItems = items?.filter((item) => {
     return item.name?.toLocaleLowerCase().trim().includes(input);
   });
 
   return (
     <>
-      {filteredItems.map((item) => {
+      {filteredItems?.map((item) => {
         return (
-          <li key={item.id}>
+          <li key={item.id} className=''>
             <Image
               src={`https://image.tmdb.org/t/p/original/${item.poster_path}`}
               width={258}
