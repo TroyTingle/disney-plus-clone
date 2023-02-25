@@ -10,10 +10,10 @@ export default function Login() {
       <Head>
         <title>Login | Disney+ Clone</title>
       </Head>
-      <body>
+      <main>
         <p>Login</p>
         <Link href='/Home'>Home</Link>
-      </body>
+      </main>
     </>
   );
 }
