@@ -36,26 +36,3 @@ export const getAllShows = async () => {
   const data = await Promise.all(fetchPromises);
   return data.flatMap((page) => page.results);
 };
-
-export const getAllShowsAndFilms = async () => {
-  const fetchPromisesFilms = pageParams.map((params) => {
-    const url = `${URL}/discover/movie?with_watch_providers=337&watch_region=GB&sort_by=popularity.asc&language=en-GB&${new URLSearchParams(
-      params
-    )}`;
-    return fetch(url).then((response) => response.json());
-  });
-
-  const fetchPromisesShows = pageParams.map((params) => {
-    const url = `${URL}/discover/tv?with_watch_providers=337&watch_region=GB&sort_by=popularity.asc&language=en-GB&${new URLSearchParams(
-      params
-    )}`;
-    return fetch(url).then((response) => response.json());
-  });
-  const films = await Promise.all(fetchPromisesFilms);
-  const shows = await Promise.all(fetchPromisesShows);
-  const showsAndFilms = films
-    .flatMap((page) => page.results)
-    .concat(shows.flatMap((page) => page.results));
-
-  return showsAndFilms;
-};
