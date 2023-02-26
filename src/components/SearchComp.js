@@ -1,4 +1,4 @@
-import { getAllFilms, getAllShows } from '@/pages/api/moviedbapi';
+import { getAllShows } from '@/pages/api/moviedbapi';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -8,30 +8,35 @@ export const SearchComp = () => {
   const [dropdown, setDropdown] = useState('');
 
   //Calls API to get films
-  async function getFilms() {
+  {
+    /*async function getFilms() {
     const response = await getAllFilms();
     const filteredResponse = response.filter((item) => {
       return item.title.toLocaleLowerCase().trim().includes(search);
     });
     setShows(filteredResponse);
+  }*/
   }
   //Calls API to get TV shows
-  async function getTVShows() {
-    const response = await getAllShows();
+  async function getShows(type) {
+    const response = await getAllShows(type);
     const filteredResponse = response.filter((item) => {
-      return item.name.toLocaleLowerCase().trim().includes(search);
+      //if (document.getElementById.value == 'Movies')
+      if (document.getElementById('Show or Film').value == 'Movies') {
+        return item.title.toLocaleLowerCase().trim().includes(search);
+      } else {
+        return item.name.toLocaleLowerCase().trim().includes(search);
+      }
     });
     setShows(filteredResponse);
   }
 
   useEffect(() => {
     // Search API when user types in the search bar.
-    var selector = document.getElementById('Show or Film');
-    var selectorValue = selector.options[selector.selectedIndex].value;
-    if (selectorValue == 'Movies') {
-      getFilms();
-    } else if (selectorValue == 'TV Shows') {
-      getTVShows();
+    if (document.getElementById('Show or Film').value == 'Movies') {
+      getShows('movie');
+    } else {
+      getShows('tv');
     }
   }, [search, dropdown]);
 
