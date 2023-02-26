@@ -7,17 +7,7 @@ export const SearchComp = () => {
   const [search, setSearch] = useState('');
   const [dropdown, setDropdown] = useState('');
 
-  //Calls API to get films
-  {
-    /*async function getFilms() {
-    const response = await getAllFilms();
-    const filteredResponse = response.filter((item) => {
-      return item.title.toLocaleLowerCase().trim().includes(search);
-    });
-    setShows(filteredResponse);
-  }*/
-  }
-  //Calls API to get TV shows
+  //Calls API to get TV shows or films based on what is selected in the dropdown
   async function getShows(type) {
     const response = await getAllShows(type);
     const filteredResponse = response.filter((item) => {
