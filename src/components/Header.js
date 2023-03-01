@@ -96,7 +96,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href='/Movies'
+            href='/movies'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -118,7 +118,7 @@ function Header() {
         <li>
           <Link
             className='mr-2  md:mr-4 p-4 flex items-center group transition-all duration-200 ease-in'
-            href='/Series'
+            href='/series'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
