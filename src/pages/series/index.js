@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { getAllShows } from '.././api/moviedbapi';
 
@@ -49,17 +50,19 @@ export default function Movies() {
           <ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
             {shows.map((show) => {
               return (
-                <li key={show.id} className='p-4'>
-                  <div className='w-[258] h-[145] rounded-md'>
-                    <Image
-                      src={`https://image.tmdb.org/t/p/original/${show.poster_path}`}
-                      alt={`Film or Series image: ${show.title}`}
-                      width={500}
-                      height={1000}
-                      className='rounded-xl'
-                    />
-                  </div>
-                </li>
+                <Link href={`/series/${show.id}`}>
+                  <li key={show.id} className='p-4'>
+                    <div className='w-[258] h-[145] rounded-md'>
+                      <Image
+                        src={`https://image.tmdb.org/t/p/original/${show.poster_path}`}
+                        alt={`Film or Series image: ${show.title}`}
+                        width={500}
+                        height={1000}
+                        className='rounded-xl'
+                      />
+                    </div>
+                  </li>
+                </Link>
               );
             })}
           </ul>
